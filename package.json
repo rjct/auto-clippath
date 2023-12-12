@@ -1,15 +1,15 @@
 {
   "name": "auto-clippath",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The TypeScript-based library for clip-path generation",
   "type": "module",
-  "main": "./dist/auto-clippath.js",
+  "main": "./dist/auto-clippath.esm.js",
   "module": "./dist/auto-clippath.esm.js",
   "types": "./types/core.d.ts",
   "exports": {
     "node": {
-      "import": "./dist/auto-clippath.esm-node.js",
-      "require": "./dist/auto-clippath.node.cjs"
+      "import": "./dist/auto-clippath.esm.js",
+      "require": "./dist/auto-clippath.esm.cjs"
     },
     "default": "./dist/auto-clippath.esm.js"
   },

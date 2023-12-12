@@ -1,9 +1,9 @@
-import { generateClipPath } from "./core";
+import autoClipPath from "./core";
 
 declare global {
   interface Window {
-    autoClipPath: typeof generateClipPath;
+    autoClipPath: typeof autoClipPath;
   }
 }
 
-window.autoClipPath = window.autoClipPath || generateClipPath;
+window.autoClipPath = window.autoClipPath || autoClipPath;

@@ -8,7 +8,7 @@ export interface Coordinates {
   y: number;
 }
 
-export async function generateClipPath(
+export default async function autoClipPath(
   image: HTMLImageElement,
   imageSize: Size2D,
   options?: {
