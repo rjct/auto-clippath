@@ -1,0 +1,67 @@
+{
+  "name": "auto-clippath",
+  "version": "1.0.0",
+  "description": "The TypeScript-based library for ",
+  "type": "module",
+  "main": "./dist/auto-clippath.js",
+  "module": "./dist/auto-clippath.esm.js",
+  "types": "./types/core.d.ts",
+  "exports": {
+    "node": {
+      "import": "./dist/auto-clippath.esm-node.js",
+      "require": "./dist/auto-clippath.node.cjs"
+    },
+    "default": "./dist/auto-clippath.esm.js"
+  },
+  "scripts": {
+    "build:all": "npm run typescript-declarations && npm run build:es6 & npm run build:esm",
+    "watch:all": "npm run watch:es6 & npm run watch:esm",
+    "build:es6": "node _build/es6.js",
+    "watch:es6": "node _build/es6.js -- watch",
+    "build:esm": "node _build/esm.js",
+    "watch:esm": "node _build/esm.js -- watch",
+    "eslint": "eslint ./src/**",
+    "typescript-declarations": "tsc --emitDeclarationOnly"
+  },
+  "keywords": [
+    "auto clip path",
+    "auto clippath",
+    "auto path",
+    "clippath generation",
+    "clippath",
+    "css clip path",
+    "css clippath",
+    "path generation",
+    "paths generate",
+    "star shape",
+    "svg clip path",
+    "svg mask",
+    "svg path",
+    "svg patterns",
+    "svg transform",
+    "svg",
+    "vector graphics"
+  ],
+  "author": "Eugene Shordukalo <info@reject.in.ua>",
+  "homepage": "https://github.com/rjct/auto-clippath",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjct/auto-clippath.git"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.5",
+    "@babel/preset-typescript": "^7.23.3",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "esbuild": "^0.19.9",
+    "eslint": "^8.55.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

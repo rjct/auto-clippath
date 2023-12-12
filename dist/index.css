@@ -1,0 +1,159 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, serif;
+}
+
+input[type="range"] {
+  flex: 1;
+}
+
+input[type="file"] {
+  max-width: 20%;
+  color: #444;
+  padding: 5px;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+.drop-container {
+  position: absolute;
+  inset: 0;
+  justify-content: center;
+}
+
+.drop-container.drag-active {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 5px,
+    rgba(255, 255, 0, 0.25) 5px,
+    rgba(255, 255, 0, 0.25) 10px
+  );
+}
+
+.drop-container.drag-active .drop-title {
+  color: #222;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+fieldset {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin: 0;
+}
+
+legend {
+  padding: 0 10px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.clippath-demo {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.clip-path-wrapper {
+  overflow: auto;
+  display: flex;
+  flex: 1;
+  position: relative;
+  box-shadow: 0 0 10px inset rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 5px,
+    #f0f0f0 5px,
+    #f0f0f0 10px
+  );
+}
+
+.clip-path-wrapper.busy {
+  overflow: hidden;
+}
+
+.clip-path-wrapper.busy:after {
+  content: "Processing...";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+polygon {
+  fill: rgba(255, 255, 0, 0.25);
+  stroke: rgba(0, 0, 0, 0.5);
+}
+
+circle {
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+#time:empty {
+  display: none;
+}
+
+#previewImg,
+#previewSvg {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  overflow: visible;
+  box-shadow: 0 -0px 10000px transparent;
+  pointer-events: none;
+}
+#previewImg {
+  border: dashed 1px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.result {
+  display: flex;
+  flex: none;
+}
+
+#result {
+  resize: none;
+  border: none;
+}
