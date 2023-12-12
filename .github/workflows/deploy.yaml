@@ -21,6 +21,5 @@ jobs:
           build_command: npm run build:all
       - uses: JS-DevTools/npm-publish@v3
         with:
-          package: dist
-          token: ${{ secrets.NPM_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           registry: "https://npm.pkg.github.com"
