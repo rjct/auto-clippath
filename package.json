@@ -1,7 +1,7 @@
 {
   "name": "auto-clippath",
   "version": "1.0.0",
-  "description": "The TypeScript-based library for ",
+  "description": "The TypeScript-based library for clip-path generation",
   "type": "module",
   "main": "./dist/auto-clippath.js",
   "module": "./dist/auto-clippath.esm.js",
