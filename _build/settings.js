@@ -1,5 +1,7 @@
 import fs from "fs";
 import path from "path";
+import { copy } from "esbuild-plugin-copy";
+import esbuildWatchPlugin from "./esbuild-plugins/esbuild-watch-plugin.js";
 
 const packageJson = fs.readFileSync(
   path.join(process.cwd(), "./package.json"),
@@ -10,17 +12,26 @@ const packageJsonParsed = JSON.parse(packageJson);
 
 export const settings = {
   entryPoints: ["./src/index.ts"],
+  plugins: [
+    copy({
+      assets: {
+        from: ["./src/demo/*"],
+        to: ["./"],
+      },
+      watch: false,
+    }),
+  ],
   bundle: true,
-  sourcemap: "linked", // external
+  sourcemap: "linked",
   minify: true,
-  target: ["es6"],
+  platform: "neutral",
+  format: "esm",
   outfile: "./dist/auto-clippath.min.js",
   banner: {
     js: `/* 
 ${packageJsonParsed.name} v${packageJsonParsed.version} 
 ${packageJsonParsed.description}
 ${packageJsonParsed.homepage}
-Licensed GPLv3 for open source use, or Commercial License for commercial use - https://github.com/mzusin/index/blob/main/LICENSE.md    
 Copyright (c) 2023-present, ${packageJsonParsed.author}   
 */`,
   },

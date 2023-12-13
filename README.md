@@ -20,7 +20,7 @@ yarn add auto-clippath
 Then you can import any function as follows:
 
 ```typescript
-import { autoClipPath } from 'auto-clippath';
+import autoClipPath from 'auto-clippath';
 
 const { clipPath } = await autoClipPath(
     HTMLImageElement,
@@ -39,7 +39,7 @@ const { clipPath } = await autoClipPath(
 The library can also be used directly in browsers without TypeScript. First, download the auto-clippath.min.js file from the GitHub repository. Then use the `autoClipPath` or `window.autoClipPath`.
 
 ```html
-<script src="auto-clippath.min.js"></script>
+<script src="auto-clippath.min.mjs" type="module"></script>
 <script>
     const { clipPath } = await autoClipPath(
         HTMLImageElement, 

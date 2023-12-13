@@ -7,10 +7,10 @@ build(
   {
     ...settings,
     ...{
-      platform: "neutral",
-      format: "esm",
-      entryPoints: ["./src/index-es6.ts"],
-      outfile: "./dist/auto-clippath.esm.js",
+      platform: "browser",
+      target: ["es2017"],
+      entryPoints: ["./src/index-browser.ts"],
+      outfile: "./dist/auto-clippath.min.mjs",
     },
   },
   args.length > 1 && args[1].trim().toLowerCase() === "watch",

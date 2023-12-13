@@ -4,7 +4,8 @@ import esbuild from "esbuild";
 export function build(settings, watch = false) {
   if (watch) {
     (async () => {
-      settings.plugins = [esbuildWatchPlugin];
+      settings.plugins = [...settings.plugins, ...[esbuildWatchPlugin]];
+
       const ctx = await esbuild.context(settings);
       await ctx.watch();
 

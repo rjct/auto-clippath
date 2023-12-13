@@ -34,7 +34,7 @@
     "types",
     "node_modules",
     "dist",
-    "demo",
+    "src/demo",
     "_build",
     "**/*.test.ts"
   ]
