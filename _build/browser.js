@@ -9,8 +9,8 @@ build(
     ...{
       platform: "browser",
       target: ["es2017"],
-      entryPoints: ["./src/index-browser.ts"],
-      outfile: "./dist/auto-clippath.min.mjs",
+      entryPoints: ["./src/auto-clippath-browser.ts"],
+      outfile: "./dist/auto-clippath-browser.mjs",
     },
   },
   args.length > 1 && args[1].trim().toLowerCase() === "watch",

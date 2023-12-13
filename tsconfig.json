@@ -4,7 +4,7 @@
     "module": "es2015",
     "moduleResolution": "node",
 
-    "outDir": "./types",
+    "outDir": "./dist",
     "allowJs": true,
 
     "isolatedModules": true,
@@ -25,7 +25,7 @@
     "strictNullChecks": true,
     "strictBindCallApply": true,
     "jsx": "react",
-    "typeRoots": ["./types"]
+    //"typeRoots": ["./src"]
   },
   "include": [
     "src",

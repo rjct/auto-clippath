@@ -11,12 +11,12 @@ const packageJson = fs.readFileSync(
 const packageJsonParsed = JSON.parse(packageJson);
 
 export const settings = {
-  entryPoints: ["./src/index.ts"],
+  entryPoints: ["./src/auto-clippath.ts"],
   plugins: [
     copy({
       assets: {
         from: ["./src/demo/*"],
-        to: ["./"],
+        to: ["./demo"],
       },
       watch: false,
     }),
@@ -24,9 +24,9 @@ export const settings = {
   bundle: true,
   sourcemap: "linked",
   minify: true,
-  platform: "neutral",
+  platform: "node",
   format: "esm",
-  outfile: "./dist/auto-clippath.min.js",
+  outfile: "./dist/auto-clippath.js",
   banner: {
     js: `/* 
 ${packageJsonParsed.name} v${packageJsonParsed.version} 
