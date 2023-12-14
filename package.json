@@ -1,10 +1,10 @@
 {
   "name": "auto-clippath",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The TypeScript-based library for clip-path generation",
   "type": "module",
   "main": "dist/auto-clippath.js",
-  "module": "dist/auto-clippath.mjs",
+  "module": "dist/auto-clippath.js",
   "types": "dist/auto-clippath.d.ts",
   "scripts": {
     "build:all": "npm run build & npm run build:browser & npm run typescript-declarations",

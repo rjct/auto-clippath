@@ -5,7 +5,7 @@
 TypeScript-based library for generating CSS/SVG clipPath coordinates from images with transparent backgrounds.
 
 ### Demo
-- https://rjct.github.io/auto-clippath
+- https://rjct.github.io/auto-clippath/demo
 
 ### TypeScript Usage
 To use the library with TypeScript, you need to install the module using npm:
